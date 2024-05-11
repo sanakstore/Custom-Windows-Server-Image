@@ -30,13 +30,13 @@ case $choice in
     1)
         # Windows 10
         img_file="windows10.img"
-        iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195174&clcid=0x409&culture=en-us&country=US"
+        iso_link="https://www.mediafire.com/file_premium/62l5wo6u5p9mphs/Windows10.iso"
         iso_file="windows10.iso"
         ;;
     2)
         # Windows Server 2012 R2
         img_file="windows2012.img"
-        iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195174&clcid=0x409&culture=en-us&country=US"
+        iso_link="https://www.mediafire.com/file_premium/0q5p1bh2q94ydls/windows_server_2012_R2.ISO"
         iso_file="windows2012.iso"
         ;;
     3)
