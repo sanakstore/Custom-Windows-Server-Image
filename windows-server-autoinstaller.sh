@@ -4,10 +4,11 @@
 display_menu() {
     echo "Please select the Windows Server version:"
     echo "1. Windows 10"
-    echo "2. Windows Server 2012 R2"
-    echo "3. Windows Server 2016"
-    echo "4. Windows Server 2019"
-    echo "5. Windows Server 2022"
+    echo "2. Windows 11"
+    echo "3. Windows Server 2012 R2"
+    echo "r. Windows Server 2016"
+    echo "5. Windows Server 2019"
+    echo "6. Windows Server 2022"
     read -p "Enter your choice: " choice
 }
 
