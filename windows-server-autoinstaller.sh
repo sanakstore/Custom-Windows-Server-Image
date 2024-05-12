@@ -130,4 +130,4 @@ wget -O "$iso_file" "$iso_link"
 echo "Windows ISO downloaded successfully."
 
 sleep 3
-$win
+read -p "Enter 2X: " $win
