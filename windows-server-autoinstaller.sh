@@ -3,63 +3,10 @@
 # Function to display menu and get user choice
 display_menu() {
     echo "Please select the Windows Server version:"
-    echo "1. Windows Server 2012 R2"
-    echo "2. Windows Server 2016"
-    echo "3. Windows Server 2019"
-    echo "4. Windows Server 2022"
+    echo "1. Windows Server 2016"
+    echo "2. Windows Server 2019"
+    echo "3. Windows Server 2022"
     read -p "Enter your choice: " choice
-}
-win2012() {
-qemu-system-x86_64 \
--m 3G \
--cpu host \
--enable-kvm \
--boot order=d \
--drive file=windows2012.iso,media=cdrom \
--drive file=windows2012.img,format=raw,if=virtio \
--drive file=virtio-win.iso,media=cdrom \
--device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
--device usb-tablet \
--vnc :0 \
-}
-win2016() {
-qemu-system-x86_64 \
--m 3G \
--cpu host \
--enable-kvm \
--boot order=d \
--drive file=windows2016.iso,media=cdrom \
--drive file=windows2016.img,format=raw,if=virtio \
--drive file=virtio-win.iso,media=cdrom \
--device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
--device usb-tablet \
--vnc :0 \
-}
-win2019() {
-qemu-system-x86_64 \
--m 3G \
--cpu host \
--enable-kvm \
--boot order=d \
--drive file=windows2019.iso,media=cdrom \
--drive file=windows2019.img,format=raw,if=virtio \
--drive file=virtio-win.iso,media=cdrom \
--device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
--device usb-tablet \
--vnc :0 \
-}
-win2022() {
-qemu-system-x86_64 \
--m 3G \
--cpu host \
--enable-kvm \
--boot order=d \
--drive file=windows2022.iso,media=cdrom \
--drive file=windows2022.img,format=raw,if=virtio \
--drive file=virtio-win.iso,media=cdrom \
--device usb-ehci,id=usb,bus=pci.0,addr=0x4 \
--device usb-tablet \
--vnc :0 \
 }
 
 # Update package repositories and upgrade existing packages
@@ -79,32 +26,22 @@ display_menu
 
 case $choice in
     1)
-        # Windows Server 2012 R2
-        img_file="windows2012.img"
-        iso_link="https://www.mediafire.com/file_premium/0q5p1bh2q94ydls/windows_server_2012_R2.ISO"
-        iso_file="windows2012.iso"
-        win="win2012"
-        ;;
-    2)
         # Windows Server 2016
         img_file="windows2016.img"
         iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195174&clcid=0x409&culture=en-us&country=US"
         iso_file="windows2016.iso"
-        win="win2016"
         ;;
-    3)
+    2)
         # Windows Server 2019
         img_file="windows2019.img"
         iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x409&culture=en-us&country=US"
         iso_file="windows2019.iso"
-        win="win2019"
         ;;
-    4)
+    3)
         # Windows Server 2022
         img_file="windows2022.img"
         iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195280&clcid=0x409&culture=en-us&country=US"
         iso_file="windows2022.iso"
-        win="win2022"
         ;;
     *)
         echo "Invalid choice. Exiting."
@@ -128,6 +65,3 @@ echo "Virtio driver ISO downloaded successfully."
 wget -O "$iso_file" "$iso_link"
 
 echo "Windows ISO downloaded successfully."
-
-sleep 3
-read -p "Enter 2X: " $win
