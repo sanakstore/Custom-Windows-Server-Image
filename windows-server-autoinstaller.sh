@@ -3,12 +3,10 @@
 # Function to display menu and get user choice
 display_menu() {
     echo "Please select the Windows Server version:"
-    echo "1. Windows 10"
-    echo "2. Windows 11"
-    echo "3. Windows Server 2012 R2"
-    echo "r. Windows Server 2016"
-    echo "5. Windows Server 2019"
-    echo "6. Windows Server 2022"
+    echo "1. Windows Server 2012 R2"
+    echo "2. Windows Server 2016"
+    echo "3. Windows Server 2019"
+    echo "4. Windows Server 2022"
     read -p "Enter your choice: " choice
 }
 
@@ -29,36 +27,24 @@ display_menu
 
 case $choice in
     1)
-        # Windows 10
-        img_file="windows10.img"
-        iso_link="https://www.mediafire.com/file_premium/62l5wo6u5p9mphs/Windows10.iso"
-        iso_file="windows10.iso"
-        ;;
-    2)
-        # Windows 11
-        img_file="windows11.img"
-        iso_link="https://www.mediafire.com/file_premium/md31nzipzsb33tg/Win11_23H2_English_x64v2.iso"
-        iso_file="windows11.iso"
-        ;;
-    3)
         # Windows Server 2012 R2
         img_file="windows2012.img"
         iso_link="https://www.mediafire.com/file_premium/0q5p1bh2q94ydls/windows_server_2012_R2.ISO"
         iso_file="windows2012.iso"
         ;;
-    4)
+    2)
         # Windows Server 2016
         img_file="windows2016.img"
         iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195174&clcid=0x409&culture=en-us&country=US"
         iso_file="windows2016.iso"
         ;;
-    5)
+    3)
         # Windows Server 2019
         img_file="windows2019.img"
         iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x409&culture=en-us&country=US"
         iso_file="windows2019.iso"
         ;;
-    6)
+    4)
         # Windows Server 2022
         img_file="windows2022.img"
         iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195280&clcid=0x409&culture=en-us&country=US"
