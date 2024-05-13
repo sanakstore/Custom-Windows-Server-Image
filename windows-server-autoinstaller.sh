@@ -46,13 +46,13 @@ case $choice in
         iso_file="windows2019.iso"
         ;;
     4)
-        # Windows 10
+        # Windows Server 2022
         img_file="windows2022.img"
         iso_link="https://go.microsoft.com/fwlink/p/?LinkID=2195280&clcid=0x409&culture=en-us&country=US"
         iso_file="windows2022.iso"
         ;;
     5)
-        # Windows Server 2022
+        # Windows 10
         img_file="windows10.img"
         iso_link="https://archive.org/download/windows-10_20H2/Win_20H2.iso"
         iso_file="windows10.iso"
